@@ -1,0 +1,50 @@
+# ===========================================
+# Java + Maven + IntelliJ + JPA .gitignore
+# ===========================================
+
+# 컴파일된 클래스 파일 무시
+*.class
+*.war
+*.ear
+*.jar
+
+# Maven 타겟 폴더 (빌드 산출물)
+target/
+
+# 로그 파일 및 실행 파일
+*.log
+*.out
+*.pid
+hs_err_pid*
+
+# 환경별 설정 파일 (OS 종속적)
+.DS_Store
+Thumbs.db
+
+# IntelliJ IDEA 관련 파일 (프로젝트 설정)
+.idea/
+*.iml
+*.iws
+
+# Eclipse 관련 파일 (IntelliJ 미사용 시 추가)
+.project
+.classpath
+.settings/
+
+# JPA 관련 파일 (설정 파일 유지)
+# - persistence.xml 유지하기 위해 제외 처리
+# - target/classes 내부의 persistence.xml은 무시
+target/classes/META-INF/persistence.xml
+
+# Maven 의존성 캐시 폴더 무시
+.m2/
+
+# 빌드 결과물 및 특정 IDE 설정 관련 폴더 무시
+bin/
+out/
+
+# Git 관련 무시
+.git/
+
+# 환경 설정 파일 무시 (필요하면 유지)
+.env
