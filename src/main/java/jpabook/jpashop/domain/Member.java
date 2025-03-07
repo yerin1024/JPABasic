@@ -1,9 +1,9 @@
 package jpabook.jpashop.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Member {
@@ -16,6 +16,10 @@ public class Member {
     private String city;
     private String street;
     private String zipcode;
+
+    //양방향 연관관계 매핑
+    @OneToMany(mappedBy = "member") //=Order객체의 member필드에 매핑되어짐
+    private List<Order> orders = new ArrayList<>();
 
     public Long getId() {
         return id;
